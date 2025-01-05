@@ -19,6 +19,7 @@ app.post('/api/message', (req, res) => {
 });
 
 // Start the server
-app.listen(port, () => {
-      console.log(`Backend server running at http://localhost:${port}`);
+app.listen(port, '0.0.0.0', () => {
+      console.log(`Backend server running at http://0.0.0.0:${port}`);
 });
+
