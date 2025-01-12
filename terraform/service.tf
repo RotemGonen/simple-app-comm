@@ -47,8 +47,7 @@ resource "aws_ecs_service" "simple_cluster_service" {
     security_groups = [aws_security_group.task_sg.id]
   }
   service_registries {
-    registry_arn = aws_service_discovery_private_dns_namespace.private_dns_namespace.arn
-    port         = 5000 # Port where the backend is listening
+    registry_arn = aws_service_discovery_service.backend_service.arn
   }
 
   load_balancer {

@@ -14,5 +14,3 @@ services:
     container_name: frontend
     ports:
       - "80:80" # Expose the frontend to the host
-    depends_on:
-      - backend

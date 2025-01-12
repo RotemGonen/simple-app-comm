@@ -24,14 +24,13 @@ resource "aws_lb_listener" "http" {
 # Create a security group for the ALB
 resource "aws_security_group" "HTTP-SG" {
   name        = "HTTP-SG"
-  description = "Allow HTTP traffic from world"
+  description = "Allow HTTP traffic from the web"
   vpc_id      = data.aws_vpc.default.id
-
   ingress {
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["0.0.0.0/0"] # Allow traffic from all IPs
   }
 
   egress {
@@ -57,3 +56,10 @@ resource "aws_lb_target_group" "TG" {
     unhealthy_threshold = 3
   }
 }
+# # Fetch the public IP of the current machine
+# data "http" "my_ip" {
+#   url = "https://checkip.amazonaws.com/"
+# }
+# output "my_ip" {
+#   value = "${trimspace(data.http.my_ip.response_body)}/32" # Output the fetched IP with /32
+# }
