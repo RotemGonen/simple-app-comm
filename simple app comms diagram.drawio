@@ -1,0 +1,72 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="26.0.6">
+  <diagram name="Page-1" id="ebpJR9qrFuWWieE_NdlR">
+    <mxGraphModel dx="1050" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="0ww-w1LpznoHiFl1gzos-1" value="" style="rounded=0;whiteSpace=wrap;html=1;gradientColor=none;fillColor=none;fontSize=13;strokeColor=light-dark(#000000,#FFFFFF);" vertex="1" parent="1">
+          <mxGeometry x="370" y="120" width="890" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="0ww-w1LpznoHiFl1gzos-2" value="VPC" style="sketch=0;outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=13;fontStyle=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_vpc;strokeColor=light-dark(#000000,#FFFFFF);fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#879196;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="210" y="26.5" width="1300" height="725" as="geometry" />
+        </mxCell>
+        <mxCell id="0ww-w1LpznoHiFl1gzos-3" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=13;strokeColor=light-dark(#000000,#FFFFFF);" edge="1" parent="1" source="0ww-w1LpznoHiFl1gzos-4" target="0ww-w1LpznoHiFl1gzos-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0ww-w1LpznoHiFl1gzos-4" value="Application Load Balancer" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.classic_load_balancer;fillColor=#F58534;gradientColor=none;fontSize=13;strokeColor=light-dark(#000000,#FFFFFF);" vertex="1" parent="1">
+          <mxGeometry x="110" y="250" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0ww-w1LpznoHiFl1gzos-5" value="Reachable on port 80&lt;br&gt;use the &quot;HTTP-SG&quot; security group.&amp;nbsp;&lt;div&gt;Dirrect tarrfic to TG named &quot;tg-ecs-service&quot;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="70" y="340" width="130" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="0ww-w1LpznoHiFl1gzos-6" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=13;strokeColor=light-dark(#000000,#FFFFFF);" edge="1" parent="1" source="0ww-w1LpznoHiFl1gzos-7" target="0ww-w1LpznoHiFl1gzos-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0ww-w1LpznoHiFl1gzos-7" value="ECS Cluster" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#ED7100;strokeColor=light-dark(#000000,#FFFFFF);dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=13;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ecs;" vertex="1" parent="1">
+          <mxGeometry x="779.5" y="540" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="0ww-w1LpznoHiFl1gzos-8" value="&lt;font&gt;Named &quot;Test-Cluster&quot;.&lt;/font&gt;&lt;div&gt;&lt;font&gt;Use a lunch template to register EC2 instances.&lt;br&gt;The launch template let the EC2 instance assume IAM profile named &quot;ecs_instance_profile&quot;.&lt;br&gt;Use Auto-Scaling to manage them.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="450" y="540" width="294.25" height="87" as="geometry" />
+        </mxCell>
+        <mxCell id="0ww-w1LpznoHiFl1gzos-9" value="Can resolve to &quot;backend.myapp.local&quot; using Service discovery" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=13;strokeColor=light-dark(#000000,#FFFFFF);" edge="1" parent="1" source="0ww-w1LpznoHiFl1gzos-10" target="0ww-w1LpznoHiFl1gzos-12">
+          <mxGeometry x="0.0244" y="-15" relative="1" as="geometry">
+            <mxPoint x="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0ww-w1LpznoHiFl1gzos-10" value="Frontend" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=light-dark(#000000,#FFFFFF);fillColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=13;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.container_1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="170" width="90" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="0ww-w1LpznoHiFl1gzos-11" value="Service" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#ED7100;strokeColor=light-dark(#000000,#FFFFFF);dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=13;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.ecs_task;" vertex="1" parent="1">
+          <mxGeometry x="820" y="340" width="37.5" height="48.65" as="geometry" />
+        </mxCell>
+        <mxCell id="0ww-w1LpznoHiFl1gzos-12" value="Backend&lt;div&gt;Exposed on port 5000&lt;/div&gt;" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=light-dark(#000000,#FFFFFF);fillColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=13;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.container_1;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="170" width="90" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="0ww-w1LpznoHiFl1gzos-13" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=13;strokeColor=light-dark(#000000,#FFFFFF);" edge="1" parent="1" source="0ww-w1LpznoHiFl1gzos-14" target="0ww-w1LpznoHiFl1gzos-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0ww-w1LpznoHiFl1gzos-14" value="TG- GROUP" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=light-dark(#000000,#FFFFFF);" vertex="1" parent="1">
+          <mxGeometry x="260" y="215.00000000000003" width="40" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="0ww-w1LpznoHiFl1gzos-15" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;AWS Application Discovery Service&lt;/font&gt;" style="sketch=0;outlineConnect=0;fontColor=#000000;strokeColor=#C73500;fillColor=#fa6800;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=13;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.application_discovery_service;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="40" width="90" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="0ww-w1LpznoHiFl1gzos-16" value="&lt;div style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Act as a reverse proxy.&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;make requests to backend container using service discovery&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Exposed on port 80.&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="425" y="270" width="300" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="0ww-w1LpznoHiFl1gzos-17" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=light-dark(#000000,#FFFFFF);fontSize=13;" edge="1" parent="1" source="0ww-w1LpznoHiFl1gzos-18" target="0ww-w1LpznoHiFl1gzos-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0ww-w1LpznoHiFl1gzos-18" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Elastic Containers Registry&amp;nbsp;&lt;/font&gt;" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#ED7100;strokeColor=light-dark(#000000,#FFFFFF);dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=13;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ecr;" vertex="1" parent="1">
+          <mxGeometry x="1330" y="780" width="56.67" height="56.67" as="geometry" />
+        </mxCell>
+        <mxCell id="0ww-w1LpznoHiFl1gzos-19" value="Containers images are stored here in a public repository." style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=none;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="1293.33" y="870" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="0ww-w1LpznoHiFl1gzos-20" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Private DNS named &quot;myapp.local&quot;.&lt;/div&gt;Backend container is registered here" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="1310" y="190" width="137.5" height="110" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
