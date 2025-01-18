@@ -50,7 +50,7 @@ resource "aws_lb_target_group" "TG" {
   target_type = "ip"
   health_check {
     path                = "/"
-    interval            = 30
+    interval            = 180
     timeout             = 5
     healthy_threshold   = 3
     unhealthy_threshold = 3

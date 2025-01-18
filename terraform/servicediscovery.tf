@@ -15,6 +15,6 @@ resource "aws_service_discovery_service" "backend_service" {
     }
   }
   health_check_custom_config {
-    failure_threshold = 1
+    failure_threshold = 3
   }
 }
