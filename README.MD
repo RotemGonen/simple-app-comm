@@ -1,6 +1,6 @@
 # Simple Cluster
 
-![Diagram](diaggem.jpg)
+![Diagram](Diaggem.jpg)
 
 This is a simple cluster of a frontend and backend built with docker and terraform.
 
